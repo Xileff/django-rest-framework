@@ -1,0 +1,16 @@
+# Create project
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+mkdir backend
+cd backend/
+django-admin startproject cfehome
+python manage.py startapp api
+
+Django project vs app
+https://www.smashingmagazine.com/2020/08/demystifying-djangos-magic/#startproject-startapp-commands
+
+Project
+If you’re wondering the difference between a project and an app. A project is a Django web application, it can consist of one or more apps. It’s the folder holding manage.py and the other module that includes the settings.py and other files. An app is a python package that does a certain feature, includes files like models.py, the migration directory and more
+
+The startproject will create the main project directory, while the startapp will create the app directory. Both are also been passed a name to be used in generation. The startproject is the first command run when creating a new project, while the startapp is run inside the new project directory.
